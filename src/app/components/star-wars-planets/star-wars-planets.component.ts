@@ -34,7 +34,6 @@ export class StarWarsPlanetsComponent implements OnInit {
   ngOnInit() {
     this.dataService.getPlanets().subscribe(data => {
       this.planets = data;
-      console.log('this.planets', this.planets);
     });
   }
 

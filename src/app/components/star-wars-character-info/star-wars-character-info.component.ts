@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ICharacter} from '../../../interfaces/interfaces';
 
 @Component({
@@ -19,9 +19,9 @@ import {ICharacter} from '../../../interfaces/interfaces';
           <div class="star-wars-character-info-modal__additional-info__content">
             <span>Height: {{characterInfo.height}}</span>
             <span>mass: {{characterInfo.mass}}</span>
-            <span>hair color: {{characterInfo.hair_color}}</span>
-            <span>skin color: {{characterInfo.skin_color}}</span>
-            <span>eye color: {{characterInfo.eye_color}}</span>
+            <span>hair color: <span [ngStyle]="{'color': characterInfo.hair_color}">{{characterInfo.hair_color}}</span></span>
+            <span>skin color: <span [ngStyle]="{'color': characterInfo.skin_color}">{{characterInfo.skin_color}}</span></span>
+            <span>eye color: <span [ngStyle]="{'color': characterInfo.eye_color}">{{characterInfo.eye_color}}</span></span>
             <span>birth year: {{characterInfo.birth_year}}</span>
             <span>gender: {{characterInfo.gender}}</span>
           </div>
@@ -30,17 +30,11 @@ import {ICharacter} from '../../../interfaces/interfaces';
     </div>
   `
 })
-export class StarWarsCharacterInfoComponent implements OnInit {
+export class StarWarsCharacterInfoComponent {
   @Input() characterInfo: ICharacter;
-  @Output() closeModal: EventEmitter<boolean> = new EventEmitter();
-
-  constructor() { }
-
-  ngOnInit() {
-    console.log('this.characterInfo', this.characterInfo);
-  }
+  @Output() closeModal: EventEmitter<any> = new EventEmitter();
 
   public closeCharacterInfoModal(): void {
-    this.closeModal.emit(true);
+    this.closeModal.emit();
   }
 }

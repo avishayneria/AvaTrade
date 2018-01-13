@@ -44,7 +44,6 @@ export class StarWarsCharactersComponent implements OnInit {
   }
 
   public openCharacterInfoModal(character: ICharacter): void {
-    console.log('character', character);
     this.selectedCharacter = character;
   }
 }
