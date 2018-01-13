@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  justify-content: center;
+  .star-wars-characters {
+    display: flex;
+    flex-direction: column;
+    &__header {
+      padding: 20px 0px;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+    &__columns {
+      display: flex;
+      font-size: 20px;
+      &__name, &__planet {
+        width: 50%;
+        padding: 12px 12px 0px 12px;
+        color: gray;
+      }
+    }
+    &__rows {
+      display: flex;
+      &__name {
+        cursor: pointer;
+        width: 50%;
+        padding: 15px 15px 0px 12px;
+        &:hover {
+          transition: 0.3s;
+          color: #673ab7;
+          text-decoration: underline;
+        }
+      }
+      &__planet {
+        width: 50%;
+        padding: 15px 15px 0px 12px;
+      }
+    }
+  }
+}

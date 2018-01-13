@@ -1,0 +1,57 @@
+:host {
+  .star-wars-character-info-modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container {
+      position: relative;
+      padding: 15px;
+      width: 500px;
+      border-left: 4px solid orange;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background: #ffffff;
+      &:hover {
+        transition: 0.3s;
+        -webkit-box-shadow: 4px 3px 13px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 13px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 3px 13px 0px rgba(0,0,0,0.75);
+      }
+    }
+    &__close-icon {
+      position: absolute;
+      cursor: pointer;
+      top: 15px;
+      right: 15px;
+      &:hover {
+        transition: 0.3s;
+        color: orange;
+      }
+    }
+    &__description {
+      margin: 20px 0px;
+    }
+    &__additional-info {
+      display: flex;
+      flex-direction: column;
+      &__header {
+        font-size: 20px;
+        color: gray;
+        text-decoration: underline;
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        span {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

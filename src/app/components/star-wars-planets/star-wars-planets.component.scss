@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  justify-content: center;
+  .star-wars-planets {
+    display: flex;
+    flex-direction: column;
+    &__header {
+      padding: 20px 0px;
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+    &__columns {
+      display: flex;
+      font-size: 20px;
+      &__name, &__terrain, &__population {
+        width: 33%;
+        padding: 12px 12px 0px 12px;
+        color: gray;
+      }
+    }
+    &__rows {
+      display: flex;
+      &__name, &__terrain, &__population {
+        width: 33%;
+        padding: 15px 15px 0px 12px;
+      }
+    }
+  }
+}
